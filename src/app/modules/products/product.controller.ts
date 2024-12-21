@@ -12,7 +12,7 @@ const createProduct = async (req: Request, res: Response) => {
   } catch (error: any) {
     res.status(500).json({
       success: false,
-      message: error.message,
+      message: "Product create error",
     });
   }
 };
@@ -41,7 +41,10 @@ const getProductById = async (req: Request, res: Response) => {
       });
     }
   } catch (error: any) {
-    res.status(500).json({ message: error.message });
+    res.status(500).json({
+      success: false,
+      message: "Product found by id error",
+    });
   }
 };
 
@@ -64,7 +67,10 @@ const updateProduct = async (req: Request, res: Response) => {
       });
     }
   } catch (error: any) {
-    res.status(500).json({ message: error.message });
+    res.status(500).json({ 
+      success: false,
+      message: 'Product update error' 
+    });
   }
 };
 
@@ -89,5 +95,8 @@ const deleteProduct = async (req: Request, res: Response) => {
 };
 
 export const ProductControllers = {
-  createProduct, getProductById, updateProduct, deleteProduct
-}
+  createProduct,
+  getProductById,
+  updateProduct,
+  deleteProduct,
+};
