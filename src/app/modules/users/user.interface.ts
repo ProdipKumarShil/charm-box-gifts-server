@@ -1,4 +1,4 @@
-export type User = {
+export type IUser = {
   name: string;
   role: 'admin' | 'seller' | 'buyer';
   imgUrl?: string;
