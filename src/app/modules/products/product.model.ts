@@ -9,7 +9,7 @@ const productSchema = new Schema<IProduct>({
   category: {type: String, enum: ['dress', 'toys', 'cosmetics', 'pets', 'foods'], required: true},
   genderType: {type: String, enum: ['male', 'female']},
   brand: {type: String, required: true},
-  status: {type: String, enum: ['pending', 'approved'], required: true},
+  status: {type: String, enum: ['pending', 'approved'], default: 'pending'},
 })
 
 export const Product = model<IProduct>('Product', productSchema)

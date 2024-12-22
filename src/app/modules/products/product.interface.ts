@@ -1,5 +1,6 @@
 export type IProduct = {
   name: string;
+  email: string;
   description: string;
   imgUrl: string,
   price: number;
